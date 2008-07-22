@@ -32,12 +32,15 @@ Features
 Example
 =======
 
- 1. Install the plugin via: (insert svn commands here)
+ 1. Install the plugin via:
+
+    cd path/to/rails_root/vendor/plugins
+    git clone git://github.com/lukegalea/hyperactiveresource.git
 
  2. Create a HyperactiveResource where you would normally use ActiveResource
     and define the meta-data/associations that drive the dynamic magic:
 
-    class Address < HyperactiveResource      
+    class Address < HyperactiveResource
       self.columns = [ :street_address, :city, :zipcode, :home_phone_number ]
       self.belong_tos = [ :country, :state ]
       self.has_manys = [ :people ]
