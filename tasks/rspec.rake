@@ -9,7 +9,8 @@ require 'spec/translator'
 namespace :hyperactive_resource do
   desc "Run all specs for hyperactive resource"
   Spec::Rake::SpecTask.new(:spec) do |t|    
-    t.spec_opts = ['--options', "\"#{RAILS_ROOT}/spec/spec.opts\""]
-    t.spec_files = FileList['vendor/plugins/hyperactive_resource/spec/*_spec.rb']    
+    spec_opts_file = "\"#{RAILS_ROOT}/spec/spec.opts\""
+    t.spec_opts = ['--options', spec_opts_file] if File.exist? spec_opts_file
+    t.spec_files = FileList['vendor/plugins/hyperactive_resource/spec/*_spec.rb']
   end
 end

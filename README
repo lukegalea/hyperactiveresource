@@ -1,11 +1,16 @@
 HyperactiveResource
 ===================
 
-Many have said that ActiveResource is not really "complete". On the surface, this means that some features that are documented aren't implemented. Digging a little deeper, we find that some features that should exist don't.
+Many have said that ActiveResource is not really "complete". On the surface,
+this means that some features that are documented aren't implemented. Digging a
+little deeper, we find that some features that should exist don't.
 
-Arguably, a "complete" ActiveResource would behave like ActiveRecord or, as the rdoc for ActiveResource states "very similarly to Active Record".
+Arguably, a "complete" ActiveResource would behave like ActiveRecord or, as the
+rdoc for ActiveResource states "very similarly to Active Record".
 
-Hyperactive Resource is MDL's extension to ActiveResource::Base written to support our Patient Registry and goes a long way towards the goal of an ActiveResource that behaves like ActiveRecord.
+Hyperactive Resource is MDL's extension to ActiveResource::Base written to
+support our Patient Registry and goes a long way towards the goal of an
+ActiveResource that behaves like ActiveRecord.
 
 Features
  * Client side validations
@@ -29,7 +34,8 @@ Example
 
  1. Install the plugin via: (insert svn commands here)
 
- 2. Create a HyperactiveResource where you would normally use ActiveResource and define the meta-data/associations that drive the dynamic magic:
+ 2. Create a HyperactiveResource where you would normally use ActiveResource
+    and define the meta-data/associations that drive the dynamic magic:
 
     class Address < HyperactiveResource      
       self.columns = [ :street_address, :city, :zipcode, :home_phone_number ]
