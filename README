@@ -1,6 +1,8 @@
 HyperactiveResource
 ===================
 
+v0.1
+
 Many have said that ActiveResource is not really "complete". On the surface,
 this means that some features that are documented aren't implemented. Digging a
 little deeper, we find that some features that should exist don't.
